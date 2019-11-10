@@ -32,6 +32,7 @@ export class ClienteListComponent implements OnInit {
         this.desEstandar+=Math.pow(result.payload.doc.data().edad-this.promedio,2);
       })
       this.desEstandar=Math.round(Math.sqrt(this.desEstandar/(count-1))*100)/100;
+      this.promedio=Math.round(this.promedio*100)/100;
     });
   }
 

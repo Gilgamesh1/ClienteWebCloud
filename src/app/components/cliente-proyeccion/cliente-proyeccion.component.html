@@ -30,7 +30,7 @@
                         <p>{{cliente.fechaMuerte | date : "dd/MM/yyyy" }}</p>
                     </td>
                     <td>
-                        <p *ngIf="cliente.calificacion=='APTO'; else menor" style="color: green">
+                        <p *ngIf="cliente.calificacion==='APTO'; else menor" style="color: green">
                             {{cliente.calificacion}}</p>
                         <ng-template #menor>
                             <p style="color: red">{{cliente.calificacion}}</p>
