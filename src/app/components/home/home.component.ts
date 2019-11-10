@@ -6,11 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  valor: number;
+  private cliente:Cliente={
+    nombres: '',
+    apellidos: '',
+    edad: 0,
+    fechaNacimento: new Date()
+  };
+  /*nombres: String;
+  apellidos: String;
+  Edad: number;
+  fechaNacimento: Date;*/
   constructor() { }
 
   ngOnInit() {
-    this.valor = Math.trunc(Math.random() * 6) + 1;
+    
   }
 
+  guardar(){
+    console.log("this.nombres");
+    console.log(this.cliente.nombres);
+  }
 }
