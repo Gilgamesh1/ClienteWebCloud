@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Proyecci&oacute;n de Clientes</h2>
+    <div div class="col-md-8 order-md-1">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>NOMBRE</th>
+                    <th>APELLIDOS</th>
+                    <th>EDAD</th>
+                    <th>FECHA DE NACIMIENTO</th>
+                    <th>FECHA DE MUERTE</th>
+                    <th>CALIFICACION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <td>
+                        <p>{{cliente.nombres}}</p>
+                    </td>
+                    <td>
+                        <p>{{cliente.apellidos}}</p>
+                    </td>
+                    <td>
+                        <p>{{cliente.edad}}</p>
+                    </td>
+                    <td>
+                        <p>{{cliente.fechaNacimento | date : "dd/MM/yyyy" }}</p>
+                    </td>
+                    <td>
+                        <p>{{cliente.fechaMuerte | date : "dd/MM/yyyy" }}</p>
+                    </td>
+                    <td>
+                        <p *ngIf="cliente.calificacion=='APTO'; else menor" style="color: green">
+                            {{cliente.calificacion}}</p>
+                        <ng-template #menor>
+                            <p style="color: red">{{cliente.calificacion}}</p>
+                        </ng-template>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

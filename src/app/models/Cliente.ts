@@ -1,4 +1,4 @@
-class Cliente{
+export class Cliente{
   nombres: String;
   apellidos: String;
   edad: number;

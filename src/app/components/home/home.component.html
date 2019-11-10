@@ -3,22 +3,22 @@
         <form #formHome="ngForm" (ngSubmit)="guardar()">
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="nombres1">Nombres</label>
-                    <input type="text" class="form-control" id="nombres1" [(ngModel)]="cliente.nombres" placeholder="Nombres" [ngModelOptions]="{standalone: true}">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" class="form-control" id="nombres" [(ngModel)]="cliente.nombres" placeholder="Nombres" [ngModelOptions]="{standalone: true}">
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="apellidos1">Apellidos</label>
-                    <input type="text" class="form-control" id="apellidos1" [(ngModel)]="cliente.apellidos" placeholder="Apellidos" [ngModelOptions]="{standalone: true}">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" [(ngModel)]="cliente.apellidos" placeholder="Apellidos" [ngModelOptions]="{standalone: true}">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="edad1">Edad</label>
-                    <input type="number" class="form-control" id="edad1" [(ngModel)]="cliente.edad" placeholder="Edad" [ngModelOptions]="{standalone: true}">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" id="edad" [(ngModel)]="cliente.edad" placeholder="Edad" [ngModelOptions]="{standalone: true}">
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="fechaNacimento1">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="fechaNacimento1" [(ngModel)]="cliente.fechaNacimento" placeholder="Fecha de Nacimiento" [ngModelOptions]="{standalone: true}">
+                    <label for="fechaNacimento">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimento" [(ngModel)]="cliente.fechaNacimento" placeholder="Fecha de Nacimiento" [ngModelOptions]="{standalone: true}">
                 </div>
             </div>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Guardar</button>
