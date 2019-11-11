@@ -1,4 +1,12 @@
 <div class="container">
+    <div class="row">
+        <div *ngIf="status==='ok'" class="alert alert-success" role="alert">
+            Se agrego correctamente el cliente
+        </div>
+        <div *ngIf="status==='error'" class="alert alert-danger" role="alert">
+            Error al agregar el cliente
+        </div>
+    </div>
     <div div class="col-md-8 order-md-1">
         <form #formHome="ngForm" (ngSubmit)="guardar()">
             <div class="row">

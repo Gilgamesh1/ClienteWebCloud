@@ -17,14 +17,24 @@ export class HomeComponent implements OnInit {
     edad: 0,
     fechaNacimento: new Date()
   };
+  public status: String;
 
   constructor(public firebaseService:FirebaseService) { }
 
   ngOnInit() {
-    
+    status='ninguno';
   }
 
   guardar(){
-    this.firebaseService.createClient(this.cliente);
+    var x = this.firebaseService.createClient(this.cliente).then(()=>{
+        this.cliente.nombres= "";
+        this.cliente.apellidos= "";
+        this.cliente.edad= 0;
+        this.cliente.fechaNacimento= new Date();
+        this.status="ok";
+      }, (error) => {
+        console.log(error);
+        this.status="error";
+    });
   }
 }
